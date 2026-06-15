@@ -1,0 +1,9 @@
+step,observations,tickers
+"Raw Quiver disclosures (all dates, all asset types)",110024,5068
+Filed 2018-11-05 to 2024-12-31,60092,3561
+Qualifying purchase rows after filters,13588,2115
+Ticker-day cells after mapping Filed to next session,10542,2115
+Cells that intersect the raw TAQ panel,9693,1784
+Raw TAQ panel ticker-days,438770,2138
+Final filtered TAQ/CRSP panel ticker-days,342016,1402
+Of which treated purchase ticker-days,7509,1165

@@ -1,0 +1,9 @@
+label,bps,p,N
+"no FE, no controls (headline)",6.5,0.5207,944695
++ stock + year-month FE,4.8,0.6306,944695
++ controls (saturated),4.2,0.6794,944029
+no FE [2018-2024],5.3,0.6076,623022
+"trade-day placebo, no FE",1.4,0.8325,944695
+"single-ticker high-attn, no FE",11.5,0.2581,944695
+strict TickerType == ST,27.1,0.0241,944695
+missing TickerType only,-1.8,0.8903,944695

@@ -1,0 +1,4 @@
+sample,no FE (bps),no FE p,ticker+date FE (bps),ticker+date FE p,FE + controls (bps),FE + controls p
+pooled,23.46,0.0,2.66,0.358,3.05,0.265
+house,20.93,0.004,-0.73,0.814,-0.16,0.956
+senate,35.54,0.04,20.9,0.005,20.34,0.006

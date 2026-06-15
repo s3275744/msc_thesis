@@ -1,0 +1,6 @@
+measure,retail_coef,retail_p,resid_coef,resid_p
+Abnormal (main),-0.00038,0.923,0.00016,0.954
+Raw level,0.00106,0.781,-0.00053,0.827
+Baseline w10/g5,0.00042,0.914,0.00047,0.868
+Baseline w20/g6,-0.00045,0.907,0.00017,0.95
+Baseline w30/g5,-0.00038,0.921,-0.00029,0.91

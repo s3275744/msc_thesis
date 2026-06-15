@@ -1,0 +1,45 @@
+chamber,committee,naics_2_codes
+House,Agriculture,11
+House,Appropriations,Not mapped
+House,Armed Services,"33, 54"
+House,Budget,Not mapped
+House,Education and the Workforce,"61, 71, 62"
+House,Education and Labor,"61, 71, 62"
+House,Energy and Commerce,"22, 31, 32, 33, 42, 21"
+House,Ethics,Not mapped
+House,Financial Services,"52, 53"
+House,Foreign Affairs,"92, 54"
+House,Homeland Security,56
+House,House Administration,Not mapped
+House,Judiciary,"92, 54"
+House,Natural Resources,21
+House,Oversight and Accountability,55
+House,Oversight and Reform,55
+House,Oversight and Government Reform,55
+House,Rules,Not mapped
+House,"Science, Space, and Technology",54
+House,Small Business,"44, 45, 72, 81, 42, 54"
+House,Transportation and Infrastructure,"48, 49, 23"
+House,Veterans' Affairs,62
+House,Ways and Means,52
+Senate,"Agriculture, Nutrition, and Forestry",11
+Senate,Appropriations,Not mapped
+Senate,Armed Services,"33, 54"
+Senate,"Banking, Housing, and Urban Affairs","52, 53"
+Senate,Budget,Not mapped
+Senate,"Commerce, Science, and Transportation","48, 49, 51, 54, 71"
+Senate,Energy and Natural Resources,"21, 22"
+Senate,Environment and Public Works,"23, 22, 56"
+Senate,Finance,52
+Senate,Foreign Relations,"92, 54"
+Senate,"Health, Education, Labor, and Pensions","61, 62, 54, 71"
+Senate,Homeland Security and Governmental Affairs,"55, 56"
+Senate,Indian Affairs,Not mapped
+Senate,Intelligence,Not mapped
+Senate,Judiciary,"92, 54"
+Senate,Rules and Administration,Not mapped
+Senate,Small Business and Entrepreneurship,"44, 45, 72, 81, 42, 54"
+Senate,Veterans' Affairs,62
+Senate,Aging,Not mapped
+Senate,Ethics,Not mapped
+Senate,United States Senate Caucus on International Narcotics Control,Not mapped

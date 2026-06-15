@@ -1,0 +1,10 @@
+# Normalise text line endings across platforms.
+* text=auto
+
+# Shell scripts must keep LF endings so they run on the WRDS Linux cluster.
+*.sh text eol=lf
+
+# Treat data and image files as binary.
+*.parquet binary
+*.xlsx binary
+*.png binary

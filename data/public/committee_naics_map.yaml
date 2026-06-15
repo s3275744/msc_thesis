@@ -1,0 +1,44 @@
+# House Committee -> two-digit NAICS mapping.
+# Source: Dong & Xu (2025), "Legislative Trades", Appendix Table A5 (verbatim).
+# Reference PDF text captured in literature/full_mds/dong-2025.md lines 1453-1492.
+#
+# Ranges in the original table (31-33, 44-45, 48-49) are expanded to all
+# constituent two-digit NAICS codes below, so a simple `naics_2 in committees[name]`
+# membership test is sufficient.
+#
+# Six House committees are explicitly listed in A5 as "Not applicable" because
+# their jurisdiction is government-wide (Appropriations, Budget) or procedural
+# (Ethics, House Administration, Rules) or because of broad oversight without
+# clear sector mapping. These are encoded as empty lists, so any trade by a
+# member who only sits on these committees will not generate a committee match
+# under the headline definition. This is consistent with Dong-Xu, who exclude
+# them when constructing the committee-industry link.
+#
+# Naming convention: the keys below are the canonical short names used in
+# the unitedstates/congress-legislators `committees-current.yaml` file
+# (with the "House Committee on " prefix stripped).
+committees:
+  Agriculture: ["11"]
+  Appropriations: []
+  Armed Services: ["33", "54"]
+  Budget: []
+  Education and the Workforce: ["61", "71", "62"]   # 115th, 118th name
+  Education and Labor: ["61", "71", "62"]            # 116th, 117th name
+  Energy and Commerce: ["22", "31", "32", "33", "42", "21"]
+  Ethics: []
+  Financial Services: ["52", "53"]
+  Foreign Affairs: ["92", "54"]
+  Homeland Security: ["56"]
+  House Administration: []
+  Judiciary: ["92", "54"]
+  Natural Resources: ["21"]
+  Oversight and Accountability: ["55"]
+  # Synonyms used by the upstream YAML across different Congresses:
+  Oversight and Reform: ["55"]            # 116th-117th name
+  Oversight and Government Reform: ["55"] # 115th name
+  Rules: []
+  Science, Space, and Technology: ["54"]
+  Small Business: ["44", "45", "72", "81", "42", "54"]
+  Transportation and Infrastructure: ["48", "49", "23"]
+  Veterans' Affairs: ["62"]
+  Ways and Means: ["52"]

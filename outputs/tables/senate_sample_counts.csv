@@ -1,0 +1,6 @@
+step,observations,tickers
+Qualifying purchase rows after filters,13588,2115
+Senate purchase rows within this universe,1939,580
+Senate ticker-event cells after filing-date mapping,1419,580
+Senate treated ticker-days in the final panel,1080,382
+Final filtered TAQ/CRSP panel ticker-days,342016,1402

@@ -1,0 +1,110 @@
+# Senate Committee -> two-digit NAICS mapping.
+#
+# IMPORTANT: This mapping is the AUTHOR'S construction, not a replication of
+# Dong & Xu (2025). Dong-Xu Appendix Table A5 covers House committees only;
+# no published Senate equivalent exists. To preserve methodological symmetry
+# with the House analysis, the keys below are derived directly from the
+# binding jurisdictional text of Senate Rule XXV (Standing Committees) and
+# mapped to two-digit NAICS using the same logic Dong-Xu apply to House
+# committees in A5.
+#
+# Logic of the mapping:
+#   - Cross-cutting or procedural committees (Appropriations, Budget, Rules
+#     and Administration, Indian Affairs, Intelligence) carry empty NAICS
+#     lists, matching Dong-Xu's treatment of analogous House committees.
+#   - Where a Senate committee mirrors a House committee covered by A5 (e.g.,
+#     Senate Armed Services <-> House Armed Services), the A5 codes are
+#     applied verbatim.
+#   - Where a Senate committee aggregates jurisdictions that A5 splits across
+#     several House committees (e.g., HSGAC = House Oversight + Homeland
+#     Security; HELP = parts of House E&L + parts of House E&C health), the
+#     union of A5 codes is used.
+#   - Where a Senate committee narrowly carves out a subset of an A5 House
+#     committee's NAICS (e.g., Commerce, Science & Transportation does NOT
+#     cover construction or energy that other Senate committees own), only
+#     the relevant subset is used.
+#
+# Range expansions (31-33, 44-45, 48-49) follow the House file: ranges are
+# expanded to all constituent two-digit codes so `naics_2 in committees[name]`
+# is a simple set-membership test.
+#
+# Naming convention: keys are the canonical short names used in
+# committees-current.yaml after stripping standard prefixes (see
+# 02b_committees_senate.py).
+committees:
+
+  # Mirrors House Agriculture -> 11.
+  # Rule XXV: agriculture, forestry, food stamps, rural development.
+  Agriculture, Nutrition, and Forestry: ["11"]
+
+  # Cross-cutting, government-wide funding (matches A5 treatment of
+  # House Appropriations).
+  Appropriations: []
+
+  # Mirrors House Armed Services. Defense procurement and R&D.
+  Armed Services: ["33", "54"]
+
+  # Mirrors House Financial Services. Banks, securities, housing, urban dev.
+  # (Mass transit is technically shared with Commerce; we keep it under
+  # Banking-Housing-Urban Affairs since House Financial Services owns
+  # housing-related transit in A5.)
+  Banking, Housing, and Urban Affairs: ["52", "53"]
+
+  # Cross-cutting, matches A5 treatment of House Budget.
+  Budget: []
+
+  # Commerce/transportation/communications/science slice. Rule XXV
+  # explicitly excludes construction (-> EPW) and energy (-> ENR), but
+  # includes sports, so 71 is added for arts/entertainment/recreation.
+  Commerce, Science, and Transportation: ["48", "49", "51", "54", "71"]
+
+  # Energy policy, mining/minerals, public lands, hydro/nuclear power.
+  # Mirrors A5: House Natural Resources -> 21; energy + utilities -> 22.
+  Energy and Natural Resources: ["21", "22"]
+
+  # Environment, EPA, water resources, public buildings, highways,
+  # nuclear regulation. Construction/public-works owned here by Senate
+  # (House T&I owns highways/construction in A5 -> 23, 48, 49).
+  Environment and Public Works: ["23", "22", "56"]
+
+  # Senate Finance == Senate analogue of House Ways and Means. A5 maps
+  # House Ways and Means -> 52. Medicare/Medicaid financing is here too
+  # but the firm-side mapping at 2-digit is finance-driven, so we keep 52.
+  Finance: ["52"]
+
+  # Mirrors House Foreign Affairs (A5: 92, 54).
+  Foreign Relations: ["92", "54"]
+
+  # Public health, NIH, FDA, education, labor, pensions, arts and humanities.
+  # House E&L in A5 is 61, 71, 62. HELP's biomedical R&D core motivates
+  # adding 54; Rule XXV's arts/humanities language motivates retaining 71.
+  Health, Education, Labor, and Pensions: ["61", "62", "54", "71"]
+
+  # HSGAC consolidates House Oversight (A5: 55) and House Homeland
+  # Security (A5: 56). Union of both.
+  Homeland Security and Governmental Affairs: ["55", "56"]
+
+  # No clean 2-digit NAICS mapping.
+  Indian Affairs: []
+
+  # Classified jurisdiction; no firm-side mapping.
+  Intelligence: []
+
+  # Mirrors House Judiciary (A5: 92, 54).
+  Judiciary: ["92", "54"]
+
+  # Procedural / internal Senate rules.
+  Rules and Administration: []
+
+  # Mirrors House Small Business (A5: 44, 45, 72, 81, 42, 54).
+  Small Business and Entrepreneurship: ["44", "45", "72", "81", "42", "54"]
+
+  # Mirrors House Veterans' Affairs (A5: 62).
+  Veterans' Affairs: ["62"]
+
+  # The following Senate full-committee names also appear in
+  # committees-current.yaml across Congresses 115-118; included for safety
+  # so the matcher never silently drops a committee assignment:
+  Aging: []           # Special Committee on Aging - no clean NAICS
+  Ethics: []          # Select Committee on Ethics - procedural
+  United States Senate Caucus on International Narcotics Control: []  # caucus, not a standing committee

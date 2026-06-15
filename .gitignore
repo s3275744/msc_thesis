@@ -1,0 +1,21 @@
+# Licensed / restricted data is never committed.
+# Keep the folder and its README, but ignore the data files inside.
+data/licensed/*
+!data/licensed/.gitkeep
+!data/licensed/README.md
+
+# The panel that notebook 00 builds (large, rebuildable).
+work_panel.parquet
+
+# Python and Jupyter junk.
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor files.
+.DS_Store
+Thumbs.db
+*.log
