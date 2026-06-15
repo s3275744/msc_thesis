@@ -24,7 +24,7 @@ The notebook outputs are deliberately not cleaned. This shows that the numbers r
 
 ```
 msc_thesis/
-  config.py            paths and sample dates (nothing hardcoded)
+  config.py            paths and sample dates
   helpers.py           all data loading and regression logic
   requirements.txt     Python packages
   notebooks/           00 to 04, run in order
@@ -81,9 +81,3 @@ The notebooks depend on each other, so run them in order:
 3. `03_committee_relevance.ipynb` rebuilds the committee match used in `02`.
 4. `04_dongxu_replication.ipynb` is a standalone replication and can run on its own.
 
-## License
-
-The code in this repository is for academic use. The data is not redistributed:
-CRSP and TAQ are licensed through WRDS, and the congressional trading file comes
-from Quiver Quantitative. You need your own access to those sources to obtain the
-licensed inputs.
