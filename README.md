@@ -54,9 +54,6 @@ kernel, and run the notebooks in order from `00` to `04`.
 
 ## Data
 
-Paths are never hardcoded. `config.py` builds every path from its own location,
-so the code works wherever you clone the repository.
-
 The data is split into two folders:
 
 - `data/public/` holds small public files (FOMC dates, committee-to-NAICS maps,
